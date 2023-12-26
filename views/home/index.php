@@ -1,13 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="es">
-<?php require_once("../html/head.php");?>
+  <?php require_once("../html/head.php");?>
 </head>
+<?php require_once("../html/header.php");?>
 
-  <?php require_once("../html/header.php");?>
-
-<body class="main-body app sidebar-mini ltr">
-
+<body class="main-body app sidebar-mini ltr">   
   <?php require_once("../html/menu.php");?>
+
+<!---------------------------->
+<!----- STAR MAIN-CONTENT ---->
+<!---------------------------->
+<div class="main-content app-content">
+<!-- container -->
+  <div class="main-container container-fluid">
+
+    <!-- NAME SESSION -->
+        <div class="breadcrumb-header justify-content-between">
+			<div class="left-content">
+				<div>
+					<h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">DashBoard</h2>
+					<p class="mg-b-0">Marco Yanez - Soporte</p>
+				</div>
+			</div>
+			<div class="main-dashboard-header-right">
+				<div>
+					
+				</div>
+				<div>
+					
+				</div>
+				<div>
+				</div>
+			</div>
+        </div>            
+    <!-- END NAME SESSION -->
+   
 
   				    <!-- row -->
                     <div class="row row-sm my-5">
@@ -173,10 +201,11 @@
 						
 					</div>
 					<!-- row closed -->
-
+  </div> <!-- End Container -->
+</div> <!-- End content -->
 
   <?php require_once("../html/footer.php");?>
   <?php require_once("../html/js.php");?>
-    
+
 </body>
 </html>

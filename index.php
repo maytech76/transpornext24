@@ -1,3 +1,15 @@
+<?php
+
+	require_once("config/conexion.php");
+
+	if (isset($_POST["enviar"]) and $_POST["enviar"] == "si") {
+		require_once("models/Usuario.php");
+		$usuario = new Usuario();
+		$usuario->login();
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -41,12 +53,12 @@
 		<div class="page overflow-hidden">
 
 			<div class="container-fluid">
-				<div class="row no-gutter">
+				<div class="row">
 					<!-- The image half -->
 					<div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
-						<div class="row wd-100p mx-auto text-center">
-							<div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-auto wd-100p">
-								<img src="assets/img/backgrounds/login.jpg" class="cover-image" alt="logo">
+						<div class="row mx-auto text-center">
+							<div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-0">
+								<img src="assets/img/backgrounds/login.jpg" class="card-img" alt="portada" style="margin: 0%;">
 							</div>
 						</div>
 					</div>
@@ -63,11 +75,45 @@
 												<img src="assets/img/brand/favicon-white.png" class="sign-favicon-b ht-40" alt="logo">
 												</a>
 												<h1 class="main-logo1 ms-1 me-0 my-auto tx-28"><span>Autosol</span></h1>
-											</div>
+											
+										</div>
 											<div class="main-signup-header">
 												<h2 class="text-primary">Bienvenido</h2>
 												<h5 class="fw-normal mb-4 text-black-50">Insertar Credenciales</h5>
-												<form>
+
+												<form action="" method="POST" id="login_form">
+
+												<?php
+
+														if (isset($_GET["m"])) {
+															switch ($_GET["m"]) {
+																case "1":
+																?>
+
+																	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+																		<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
+																		<span class="alert-inner--text"><stron class="text-dark">Error! - El Usuario y/ó Contraseña son Incorrectos</stron ></span>
+																		<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
+																	</div>
+
+																<?php
+																	break;
+
+																case "2";
+																?>
+
+																	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+																		<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
+																		<span class="alert-inner--text"><stron class="text-dark">Error! - Existen Campos Vacios, Verificar</stron ></span>
+																		<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
+																	</div>
+
+																<?php
+																	break;
+															}
+														}
+
+														?>
 													
 													<div class="form-group">
 														<label>Email</label> <input id="usu_correo" name="usu_correo" class="form-control" placeholder="Ingresar email" type="text">
@@ -75,7 +121,9 @@
 													<div class="form-group">
 														<label>Password</label> <input id="usu_clave" name="usu_clave" class="form-control" placeholder="Ingresar  password" type="password">
 													</div>
-													<a href="index.html"  class="btn btn-main-primary btn-block">Acceder</a>
+													<input type="hidden" name="enviar" value ="si">
+													<!-- <a href="index.html"  class="btn btn-main-primary btn-block">Acceder</a> -->
+													<button class="btn btn-main-primary btn-block" type="submit">Acceder</button>
 													
 												</form>
 												<!-- <div class="main-signup-footer mt-5">

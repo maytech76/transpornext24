@@ -70,6 +70,10 @@
                                 <li class="side-item side-item-category" style="color: aqua;">Administrativo</li>
 
                                     <li class="slide">
+                                        <a class="side-menu__item" href="../MdUsuario/"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Usuarios</span></a>
+                                    </li>
+
+                                    <li class="slide">
                                         <a class="side-menu__item" href="empresa.php"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Empresa</span></a>
                                     </li>
 
@@ -116,10 +120,6 @@
         </div>
 
 
-        <!---------------------------->
-        <!----- STAR MAIN-CONTENT ---->
-        <!---------------------------->
-        <div class="main-content app-content">
+       
 
-            <!-- container -->
-            <div class="main-container container-fluid">
+                

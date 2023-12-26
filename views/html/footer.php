@@ -1,6 +1,4 @@
-			<!-- /Container -->
-            </div>
-			<!-- /main-content -->
+			
 
 					<!-- Footer opened -->
 					<div class="main-footer">
@@ -10,10 +8,6 @@
 					</div>
 					<!-- Footer closed -->
 
-			</div>
-			 <!--------------------------->
-			<!----- END MAIN-CONTENT ----->
-			<!---------------------------->
 
 		<!-- Back-to-top -->
 		<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>

@@ -26,3 +26,18 @@
 
 		<!--- Animations css-->
 		<link href="../../assets/css/animate.css" rel="stylesheet">
+
+		 <!--datatable css-->
+		 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+
+		<!--datatable responsive css-->
+		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+
+		<!-- Sweet Alert css-->
+		<link href="../../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Button Datatable -->
+		<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+		<!-- Pluging Select2 -->
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
