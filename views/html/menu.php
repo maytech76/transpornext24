@@ -78,6 +78,10 @@
                                     </li>
 
                                     <li class="slide">
+                                        <a class="side-menu__item" href="../MdtpCliente/"><i class="fe fe-package mx-2"></i><span class="side-menu__label"> Tipo Clientes</span></a>
+                                    </li>
+
+                                    <li class="slide">
                                         <a class="side-menu__item" href="cliente.php"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Clientes</span></a>
                                     </li>
 

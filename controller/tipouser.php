@@ -75,7 +75,7 @@ switch ($_GET["op"]) {
 
       /* TODO: Listado de Productos */
     case "combo";
-             $datos=$tipouser->get_tipo_user();
+            $datos=$tipouser->get_tipo_user();
             if(is_array($datos)==true and count($datos)>0){
             $html="";
             $html.="<option selected>Seleccionar</option>";
