@@ -52,92 +52,93 @@
 		<!-- Page -->
 		<div class="page overflow-hidden">
 
+
 			<div class="container-fluid">
 				<div class="row">
 					<!-- The image half -->
-					<div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
-						<div class="row mx-auto text-center">
-							<div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-0">
-								<img src="assets/img/backgrounds/login.jpg" class="card-img" alt="portada" style="margin: 0%;">
-							</div>
-						</div>
+					<div class="col-md-6 col-lg-6 col-xl-6 d-flex align-items-stretch p-0">
+						<img src="assets/img/backgrounds/login.jpg" class="w-100" alt="Portada">
 					</div>
 					<!-- The content half -->
-					<div class="col-md-6 col-lg-6 col-xl-5 bg-white py-4">
+					<div class="col-md-6 col-lg-6 col-xl-6 bg-white py-4">
 						<div class="login d-flex align-items-center py-2">
 							<!-- Demo content-->
 							<div class="container p-0">
 								<div class="row">
 									<div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
-										<div class="card-sigin">
-											<div class="mb-5 d-flex">
-												<a href="index.html"><img src="assets/img/brand/favicon.png" class="sign-favicon-a ht-40" alt="logo">
-												<img src="assets/img/brand/favicon-white.png" class="sign-favicon-b ht-40" alt="logo">
-												</a>
-												<h1 class="main-logo1 ms-1 me-0 my-auto tx-28"><span>Autosol</span></h1>
-											
+
+									<!-- imagen de la empresa -->
+										<div class="mb-5 d-flex">
+											<a href="index.html"><img src="assets/img/brand/favicon.png"
+													class="sign-favicon-a ht-40" alt="logo">
+												<img src="assets/img/brand/favicon-white.png"
+													class="sign-favicon-b ht-40" alt="logo">
+											</a>
+											<h1 class="main-logo1 ms-1 me-0 my-auto tx-28">Autosol<span> Spa</span></h1>
 										</div>
-											<div class="main-signup-header">
-												<h2 class="text-primary">Bienvenido</h2>
-												<h5 class="fw-normal mb-4 text-black-50">Insertar Credenciales</h5>
+									<!-- end imagen de la empresa -->
+										<div class="main-signup-header">
+											<h2 class="text-primary">Bienvenido</h2>
+											<h5 class="fw-normal mb-4">Insertar Credenciales</h5>
 
-												<form action="" method="POST" id="login_form">
+											<form action="" method="POST" id="login_form">
 
-												<?php
+											<?php
 
-														if (isset($_GET["m"])) {
-															switch ($_GET["m"]) {
-																case "1":
-																?>
+													if (isset($_GET["m"])) {
+														switch ($_GET["m"]) {
+															case "1":
+															?>
 
-																	<div class="alert alert-warning alert-dismissible fade show" role="alert">
-																		<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
-																		<span class="alert-inner--text"><stron class="text-dark">Error! - El Usuario y/ó Contraseña son Incorrectos</stron ></span>
-																		<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
-																	</div>
+																<div class="alert alert-warning alert-dismissible fade show" role="alert">
+																	<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
+																	<span class="alert-inner--text"><stron class="text-dark">Error! - El Usuario y/ó Contraseña son Incorrectos</stron ></span>
+																	<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
+																</div>
 
-																<?php
-																	break;
+															<?php
+																break;
 
-																case "2";
-																?>
+															case "2";
+															?>
 
-																	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-																		<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
-																		<span class="alert-inner--text"><stron class="text-dark">Error! - Existen Campos Vacios, Verificar</stron ></span>
-																		<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
-																	</div>
+																<div class="alert alert-danger alert-dismissible fade show" role="alert">
+																	<span class="alert-inner--icon"><i class="fe fe-info text-dark"></i></span>
+																	<span class="alert-inner--text"><stron class="text-dark">Error! - Existen Campos Vacios, Verificar</stron ></span>
+																	<button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"></button>
+																</div>
 
-																<?php
-																	break;
-															}
+															<?php
+																break;
 														}
+													}
 
-														?>
-													
-													<div class="form-group">
-														<label>Email</label> <input id="usu_correo" name="usu_correo" class="form-control" placeholder="Ingresar email" type="text">
-													</div>
-													<div class="form-group">
-														<label>Password</label> <input id="usu_clave" name="usu_clave" class="form-control" placeholder="Ingresar  password" type="password">
-													</div>
-													<input type="hidden" name="enviar" value ="si">
-													<!-- <a href="index.html"  class="btn btn-main-primary btn-block">Acceder</a> -->
-													<button class="btn btn-main-primary btn-block" type="submit">Acceder</button>
-													
-												</form>
-												<!-- <div class="main-signup-footer mt-5">
-													<p>Already have an account? <a href="signin.html">Sign In</a></p>
-												</div> -->
-											</div>
+													?>
+												
+												<div class="form-group">
+													<label>Email</label> <input id="usu_correo" name="usu_correo" class="form-control" placeholder="Ingresar email" type="text">
+												</div>
+												<div class="form-group">
+													<label>Password</label> <input id="usu_pass" name="usu_pass" class="form-control" placeholder="Ingresar  password" type="password">
+												</div>
+												<input type="hidden" name="enviar" value ="si">
+												<!-- <a href="index.html"  class="btn btn-main-primary btn-block">Acceder</a> -->
+												<button class="btn btn-main-primary btn-block" type="submit">Acceder</button>
+												
+											</form>
+											<!-- <div class="main-signup-footer mt-5">
+												<p>Already have an account? <a href="signin.html">Sign In</a></p>
+											</div> -->
 										</div>
+										
 									</div>
 								</div>
-							</div><!-- End -->
+							</div>
 						</div>
-					</div><!-- End -->
+					</div>
 				</div>
 			</div>
+		
 
 		</div>
 		<!-- End Page -->

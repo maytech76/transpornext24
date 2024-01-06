@@ -1,41 +1,47 @@
 
+<?php
+require_once("../../config/conexion.php");
+if (isset($_SESSION["usu_id"])) {
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
-  <?php require_once("../html/head.php");?>
-</head>
-<?php require_once("../html/header.php");?>
+	<?php require_once("../html/head.php");?>
+	</head>
+	<?php require_once("../html/header.php");?>
 
-<body class="main-body app sidebar-mini ltr">   
-  <?php require_once("../html/menu.php");?>
+	<body class="main-body app sidebar-mini ltr">   
+	<?php require_once("../html/menu.php");?>
 
-<!---------------------------->
-<!----- STAR MAIN-CONTENT ---->
-<!---------------------------->
-<div class="main-content app-content">
-<!-- container -->
-  <div class="main-container container-fluid">
+	<!---------------------------->
+	<!----- STAR MAIN-CONTENT ---->
+	<!---------------------------->
+	<div class="main-content app-content">
+	<!-- container -->
+	<div class="main-container container-fluid">
 
-    <!-- NAME SESSION -->
-        <div class="breadcrumb-header justify-content-between">
-			<div class="left-content">
-				<div>
-					<h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">DashBoard</h2>
-					<p class="mg-b-0">Marco Yanez - Soporte</p>
+		<!-- NAME SESSION -->
+			<div class="breadcrumb-header justify-content-between">
+				<div class="left-content">
+					<div>
+						<h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">DashBoard</h2>
+						<p class="mg-b-0">Marco Yanez - Soporte</p>
+					</div>
 				</div>
-			</div>
-			<div class="main-dashboard-header-right">
-				<div>
-					
+				<div class="main-dashboard-header-right">
+					<div>
+						
+					</div>
+					<div>
+						
+					</div>
+					<div>
+					</div>
 				</div>
-				<div>
-					
-				</div>
-				<div>
-				</div>
-			</div>
-        </div>            
-    <!-- END NAME SESSION -->
-   
+			</div>            
+		<!-- END NAME SESSION -->
+	
 
   				    <!-- row -->
                     <div class="row row-sm my-5">
@@ -58,7 +64,7 @@
 										</div>
 									</div>
 								</div>
-								<span id="compositeline" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
+								<!-- <span id="compositeline" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span> -->
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 col-xm-12">
@@ -80,7 +86,7 @@
 										</div>
 									</div>
 								</div>
-								<span id="compositeline2" class="pt-1">3,2,4,6,12,14,8,7,14,16,12,7,8,4,3,2,2,5,6,7</span>
+								<!-- <span id="compositeline2" class="pt-1">3,2,4,6,12,14,8,7,14,16,12,7,8,4,3,2,2,5,6,7</span> -->
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 col-xm-12">
@@ -102,7 +108,7 @@
 										</div>
 									</div>
 								</div>
-								<span id="compositeline3" class="pt-1">5,10,5,20,22,12,15,18,20,15,8,12,22,5,10,12,22,15,16,10</span>
+								<!-- <span id="compositeline3" class="pt-1">5,10,5,20,22,12,15,18,20,15,8,12,22,5,10,12,22,15,16,10</span> -->
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 col-xm-12">
@@ -124,7 +130,7 @@
 										</div>
 									</div>
 								</div>
-								<span id="compositeline4" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
+								<!-- <span id="compositeline4" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span> -->
 							</div>
 						</div>
 					</div>
@@ -201,11 +207,17 @@
 						
 					</div>
 					<!-- row closed -->
-  </div> <!-- End Container -->
-</div> <!-- End content -->
+     </div> <!-- End Container -->
+     </div> <!-- End content -->
 
-  <?php require_once("../html/footer.php");?>
-  <?php require_once("../html/js.php");?>
+     <?php require_once("../html/footer.php");?>
+    <?php require_once("../html/js.php");?>
 
-</body>
+    </body>
 </html>
+
+<?php
+} else {
+	header("location:" . Conectar::ruta() . "index.php");
+}
+?>

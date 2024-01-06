@@ -183,7 +183,7 @@
                                             <a class="dropdown-item" href="profile.html"><i class="bx bx-user-circle"></i>Perfil</a>
                                             <a class="dropdown-item" href="editprofile.html"><i class="bx bx-cog"></i> Editar Perfil</a>
                                             <a class="dropdown-item" href="editprofile.html"><i class="bx bx-slider-alt"></i>Configuración</a>
-                                            <a class="dropdown-item" href="signin.html"><i class="bx bx-log-out"></i>Salir</a>
+                                            <a class="dropdown-item"  href="../Logout/logout.php"><i class="bx bx-log-out"></i>Salir</a>
                                         </div>
                                     </li>
 

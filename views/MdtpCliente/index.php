@@ -1,3 +1,13 @@
+
+<?php
+require_once("../../config/conexion.php");
+if (isset($_SESSION["usu_id"])) {
+
+	
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <?php require_once("../html/head.php");?>
@@ -60,8 +70,8 @@
                                             <th style="width: 10%;">id</th>
                                             <th style="width: 50%;">Nombre</th>
                                             <th style="width: 10%;">pago</th>
-                                            <th class="text-center" style="width: 15%;">Editar</th>
-                                            <th class="text-center" style="width: 15%;">Eliminar</th>
+                                            <th class="text-center" style="width: 5%;">Editar</th>
+                                            <th class="text-center" style="width: 5%;">Eliminar</th>
                                             </tr>
                                         </thead>
                                     <tbody>
@@ -97,3 +107,9 @@
 
 	</body>
 </html>
+
+<?php
+} else {
+	header("location:" . Conectar::ruta() . "index.php");
+}
+?>

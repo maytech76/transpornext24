@@ -8,8 +8,8 @@ class Usuario extends ConectarSql{
         parent::set_names();
          if(isset($_POST["enviar"])){
           $usu_correo = $_POST["usu_correo"];
-          $usu_clave = $_POST["usu_clave"];
-           if(empty($usu_correo) and empty($usu_clave)){
+          $usu_pass = $_POST["usu_pass"];
+           if(empty($usu_correo) and empty($usu_pass)){
               header("location:".conectarSql::ruta()."index.php?m=2");
               exit;
 
@@ -20,7 +20,7 @@ class Usuario extends ConectarSql{
               $Sql="call SP_L_USER_EXIST (?,?)";
               $stmt=$conectar->prepare($Sql);
               $stmt->bindValue(1, $usu_correo);
-              $stmt->bindValue(2, $usu_clave);
+              $stmt->bindValue(2, $usu_pass);
              
               $stmt->execute();
               $resultado =$stmt->fetch();
@@ -32,8 +32,10 @@ class Usuario extends ConectarSql{
                  $_SESSION["usu_id"]=$resultado["usu_id"];
                  $_SESSION["usu_nombre"]=$resultado["usu_nombre"];
                  $_SESSION["usu_apellido"]=$resultado["usu_apellido"];
-                 $_SESSION["tpuse_id"]=$resultado["tpuse_id"];
+                 $_SESSION["tipo_id"]=$resultado["tipo_id"];
+                 $_SESSION["tpuse_nombre"]=$resultado["tpuse_nombre"];
                  $_SESSION["usu_correo"]=$resultado["usu_correo"];
+                 $_SESSION["usu_img"]=$resultado["usu_img"];
                  $_SESSION["est"]=$resultado["est"];
                  header("location:".ConectarSql::ruta()."views/home/");
                 

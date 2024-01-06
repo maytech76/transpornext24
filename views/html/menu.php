@@ -1,3 +1,5 @@
+   
+
 <!---------------------->
 <!-- MENU SIDEBAR IZQ -->
 <!---------------------->
@@ -15,54 +17,65 @@
                             <div class="dropdown user-pro-body">
                                 <div class="main-img-user avatar-xl">
                                     <!-- photo avatar sidebar -->
-                                    <img alt="user-img" src="../../assets/img/users/6.jpg"><span class="avatar-status profile-status bg-green"></span>
+                                    <img alt="user-img" src="../../assets/images/users/<?php echo $_SESSION["usu_img"]?>"><span class="avatar-status profile-status bg-green"></span>
                                 </div>
                                 <div class="user-info">
-                                    <h4 class="fw-semibold mt-3 mb-0">AUTOSOL</h4>
-                                    <span class="mb-0 text-muted">Administrador</span>
+                                    <h4 class="fw-semibold mt-3 mb-0"><?php echo $_SESSION["usu_nombre"]?></h4>
+                                    <span class="mb-0 text-muted"><?php echo $_SESSION["tpuse_nombre"]?></span>
                                 </div>
                             </div>
                         </div>
                         <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"/></svg></div>
                         <ul class="side-menu">
 
-                            <div class="cliente">
-                                <li class="side-item side-item-category" style="color: yellowgreen;">cliente</li>
+                            <?php 
+                               if ($_SESSION["tipo_id"]==2) {
+                               ?>
 
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Profesional</span></a>
-                                    </li>
+                                <div class="cliente">
+                                    <li class="side-item side-item-category" style="color: yellowgreen;">cliente</li>
 
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Orden de Traslado</span></a>
-                                    </li>
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Profesional</span></a>
+                                        </li>
 
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Reportes</span></a>
-                                    </li>
-                            </div>
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Orden de Traslado</span></a>
+                                        </li>
 
-                            <br>
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Reportes</span></a>
+                                        </li>
+                                </div>
 
-                            <div class="chofer">
-                                <li class="side-item side-item-category" style="color:darkorange;">Chofer</li>
+                            <?php
+                             }else if ($_SESSION["tipo_id"]==3) { ?>
+                                <br>
 
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Traslado</span></a>
-                                    </li>
+                                <div class="chofer">
+                                    <li class="side-item side-item-category" style="color:darkorange;">Chofer</li>
+    
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Traslado</span></a>
+                                        </li>
+    
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">List Traslados</span></a>
+                                        </li>
+    
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Reportes</span></a>
+                                        </li>
+    
+                                        <li class="slide">
+                                            <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Viaticos</span></a>
+                                        </li>
+                                </div>
+                            
 
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">List Traslados</span></a>
-                                    </li>
-
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Reportes</span></a>
-                                    </li>
-
-                                    <li class="slide">
-                                        <a class="side-menu__item" href="#"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Viaticos</span></a>
-                                    </li>
-                            </div>
+                            <?php
+                                }else if ($_SESSION["tipo_id"]==1) { ?>
+                                
 
                             <br>
 
@@ -82,7 +95,7 @@
                                     </li>
 
                                     <li class="slide">
-                                        <a class="side-menu__item" href="cliente.php"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Clientes</span></a>
+                                        <a class="side-menu__item" href="../MdCliente/"><i class="fe fe-package mx-2"></i><span class="side-menu__label">Clientes</span></a>
                                     </li>
 
                                     <li class="slide">
@@ -110,7 +123,11 @@
                                     </li>
                             </div>
 
-                            
+                            <?php
+
+                            }
+
+                            ?>
 
                         
                         </ul>
